@@ -55,6 +55,15 @@ COSE DA RICORDARE
 
             }
         */
+
+/*
+SELECT DATE_FORMAT(ref1.`data_ora_inserimento` , '%d/%m/%y alle ore %H:%i') AS data_format 
+FROM votazioni_referendum_1 ref1
+WHERE ID_voto=4
+ORDER BY data_format DESC
+LIMIT 1 
+
+*/
 ?>
 <?php
 
@@ -91,212 +100,6 @@ COSE DA RICORDARE
                 echo 'prova';
                 break;
         }
-
-    }
-
-    // ---------------------------------------- //
-
-    $query="SELECT * FROM votazioni_referendum_1 WHERE ID_voto=4 ORDER BY data_ora_inserimento DESC LIMIT 1";
-    $tab_ris=mysqli_query($conn,$query);
-    for($i=0 ; $i<1 ; ++$i) {
-        $array=mysqli_fetch_array($tab_ris);
-        $sez1_ul_vot_Si=$array['data_ora_inserimento'];
-    }
-
-    $query="SELECT * FROM votazioni_referendum_2 WHERE ID_voto=4 ORDER BY data_ora_inserimento DESC LIMIT 1";
-    $tab_ris=mysqli_query($conn,$query);
-    for($i=0 ; $i<1 ; ++$i) {
-        $array=mysqli_fetch_array($tab_ris);
-        $sez2_ul_vot_Si=$array['data_ora_inserimento'];
-    }
-
-    $query="SELECT * FROM votazioni_referendum_3 WHERE ID_voto=4 ORDER BY data_ora_inserimento DESC LIMIT 1";
-    $tab_ris=mysqli_query($conn,$query);
-    for($i=0 ; $i<1 ; ++$i) {
-        $array=mysqli_fetch_array($tab_ris);
-        $sez3_ul_vot_Si=$array['data_ora_inserimento'];
-    }
-
-    $query="SELECT * FROM votazioni_referendum_4 WHERE ID_voto=4 ORDER BY data_ora_inserimento DESC LIMIT 1";
-    $tab_ris=mysqli_query($conn,$query);
-    for($i=0 ; $i<1 ; ++$i) {
-        $array=mysqli_fetch_array($tab_ris);
-        $sez4_ul_vot_Si=$array['data_ora_inserimento'];
-    }
-
-    $query="SELECT * FROM votazioni_referendum_5 WHERE ID_voto=4 ORDER BY data_ora_inserimento DESC LIMIT 1";
-    $tab_ris=mysqli_query($conn,$query);
-    for($i=0 ; $i<1 ; ++$i) {
-        $array=mysqli_fetch_array($tab_ris);
-        $sez5_ul_vot_Si=$array['data_ora_inserimento'];
-    }
-
-    // ---------------------------------------- //
-
-    $query="SELECT * FROM votazioni_referendum_1 WHERE ID_voto=1 ORDER BY data_ora_inserimento DESC LIMIT 1";
-    $tab_ris=mysqli_query($conn,$query);
-    for($i=0 ; $i<1 ; ++$i) {
-        $array=mysqli_fetch_array($tab_ris);
-        $sez1_ul_vot_No=$array['data_ora_inserimento'];
-    }
-    
-    $query="SELECT * FROM votazioni_referendum_2 WHERE ID_voto=1 ORDER BY data_ora_inserimento DESC LIMIT 1";
-    $tab_ris=mysqli_query($conn,$query);
-    for($i=0 ; $i<1 ; ++$i) {
-        $array=mysqli_fetch_array($tab_ris);
-        $sez2_ul_vot_No=$array['data_ora_inserimento'];
-    }
-
-    $query="SELECT * FROM votazioni_referendum_3 WHERE ID_voto=1 ORDER BY data_ora_inserimento DESC LIMIT 1";
-    $tab_ris=mysqli_query($conn,$query);
-    for($i=0 ; $i<1 ; ++$i) {
-        $array=mysqli_fetch_array($tab_ris);
-        $sez3_ul_vot_No=$array['data_ora_inserimento'];
-    }
-
-    $query="SELECT * FROM votazioni_referendum_4 WHERE ID_voto=1 ORDER BY data_ora_inserimento DESC LIMIT 1";
-    $tab_ris=mysqli_query($conn,$query);
-    for($i=0 ; $i<1 ; ++$i) {
-        $array=mysqli_fetch_array($tab_ris);
-        $sez4_ul_vot_No=$array['data_ora_inserimento'];
-    }
-
-    $query="SELECT * FROM votazioni_referendum_5 WHERE ID_voto=1 ORDER BY data_ora_inserimento DESC LIMIT 1";
-    $tab_ris=mysqli_query($conn,$query);
-    for($i=0 ; $i<1 ; ++$i) {
-        $array=mysqli_fetch_array($tab_ris);
-        $sez5_ul_vot_No=$array['data_ora_inserimento'];
-    }
-
-    // ---------------------------------------- //
-
-    $query="SELECT * FROM votazioni_referendum_1 WHERE ID_voto=3 ORDER BY data_ora_inserimento DESC LIMIT 1";
-    $tab_ris=mysqli_query($conn,$query);
-    for($i=0 ; $i<1 ; ++$i) {
-        $array=mysqli_fetch_array($tab_ris);
-        $sez1_ul_vot_Null=$array['data_ora_inserimento'];
-    }
-
-    $query="SELECT * FROM votazioni_referendum_2 WHERE ID_voto=3 ORDER BY data_ora_inserimento DESC LIMIT 1";
-    $tab_ris=mysqli_query($conn,$query);
-    for($i=0 ; $i<1 ; ++$i) {
-        $array=mysqli_fetch_array($tab_ris);
-        $sez2_ul_vot_Null=$array['data_ora_inserimento'];
-    }
-
-    $query="SELECT * FROM votazioni_referendum_3 WHERE ID_voto=3 ORDER BY data_ora_inserimento DESC LIMIT 1";
-    $tab_ris=mysqli_query($conn,$query);
-    for($i=0 ; $i<1 ; ++$i) {
-        $array=mysqli_fetch_array($tab_ris);
-        $sez3_ul_vot_Null=$array['data_ora_inserimento'];
-    }
-
-    $query="SELECT * FROM votazioni_referendum_4 WHERE ID_voto=3 ORDER BY data_ora_inserimento DESC LIMIT 1";
-    $tab_ris=mysqli_query($conn,$query);
-    for($i=0 ; $i<1 ; ++$i) {
-        $array=mysqli_fetch_array($tab_ris);
-        $sez4_ul_vot_Null=$array['data_ora_inserimento'];
-    }
-
-    $query="SELECT * FROM votazioni_referendum_5 WHERE ID_voto=3 ORDER BY data_ora_inserimento DESC LIMIT 1";
-    $tab_ris=mysqli_query($conn,$query);
-    for($i=0 ; $i<1 ; ++$i) {
-        $array=mysqli_fetch_array($tab_ris);
-        $sez5_ul_vot_Null=$array['data_ora_inserimento'];
-    }
-
-    // ---------------------------------------- //
-
-    $query="SELECT * FROM votazioni_referendum_1 WHERE ID_voto=2 ORDER BY data_ora_inserimento DESC LIMIT 1";
-    $tab_ris=mysqli_query($conn,$query);
-    for($i=0 ; $i<1 ; ++$i) {
-        $array=mysqli_fetch_array($tab_ris);
-        $sez1_ul_vot_B=$array['data_ora_inserimento'];
-    }
-
-    $query="SELECT * FROM votazioni_referendum_2 WHERE ID_voto=2 ORDER BY data_ora_inserimento DESC LIMIT 1";
-    $tab_ris=mysqli_query($conn,$query);
-    for($i=0 ; $i<1 ; ++$i) {
-        $array=mysqli_fetch_array($tab_ris);
-        $sez2_ul_vot_B=$array['data_ora_inserimento'];
-    }
-
-    $query="SELECT * FROM votazioni_referendum_3 WHERE ID_voto=2 ORDER BY data_ora_inserimento DESC LIMIT 1";
-    $tab_ris=mysqli_query($conn,$query);
-    for($i=0 ; $i<1 ; ++$i) {
-        $array=mysqli_fetch_array($tab_ris);
-        $sez3_ul_vot_B=$array['data_ora_inserimento'];
-    }
-
-    $query="SELECT * FROM votazioni_referendum_4 WHERE ID_voto=2 ORDER BY data_ora_inserimento DESC LIMIT 1";
-    $tab_ris=mysqli_query($conn,$query);
-    for($i=0 ; $i<1 ; ++$i) {
-        $array=mysqli_fetch_array($tab_ris);
-        $sez4_ul_vot_B=$array['data_ora_inserimento'];
-    }
-
-    $query="SELECT * FROM votazioni_referendum_5 WHERE ID_voto=2 ORDER BY data_ora_inserimento DESC LIMIT 1";
-    $tab_ris=mysqli_query($conn,$query);
-    for($i=0 ; $i<1 ; ++$i) {
-        $array=mysqli_fetch_array($tab_ris);
-        $sez5_ul_vot_B=$array['data_ora_inserimento'];
-    }
-
-    // ---------------------------------------- //
-
-    // 2020-09-21 16:14:37 - 2020-09-21 16:32:56 - 2020-09-21 16:50:47 - 2020-09-21 16:59:45 - 2020-09-21 16:38:43 
-    
-    //    0                      1                      2                       3                   4
-    // n=5 -> 0:4
-    // i_aa_SI=1
-
-    $array_ultimo_Si=array($sez1_ul_vot_Si , $sez2_ul_vot_Si, $sez3_ul_vot_Si, $sez4_ul_vot_Si, $sez5_ul_vot_Si);
-
-    $max_si=$array_ultimo_Si[0];
-
-    for($i_aa_SI=0; $i_aa_SI < count($array_ultimo_Si) ; ++$i_aa_SI) {
-    
-        if($max_si < $array_ultimo_Si[$i_aa_SI+1]) {
-            $max_si=$array_ultimo_Si[$i_aa_SI+1];
-        } 
-
-    }
-
-
-   
-    $array_ultimo_No=array($sez1_ul_vot_No, $sez2_ul_vot_No, $sez3_ul_vot_No, $sez4_ul_vot_No, $sez5_ul_vot_No);
-
-    $max_no=$array_ultimo_No[0];
-
-    for($i_aa_NO=0; $i_aa_NO < count($array_ultimo_No) ; ++$i_aa_NO) {
-    
-        if($max_no < $array_ultimo_No[$i_aa_NO+1]) {
-            $max_no=$array_ultimo_No[$i_aa_NO+1];
-        } 
-
-    }
-    
-    $array_ultimo_Null=array($sez1_ul_vot_Null, $sez2_ul_vot_Null, $sez3_ul_vot_Null, $sez4_ul_vot_Null, $sez5_ul_vot_Null);
-
-    $max_null=$array_ultimo_Null[0];
-
-    for($i_aa_NULL=0; $i_aa_NULL < count($array_ultimo_Null) ; ++$i_aa_NULL) {
-    
-        if($max_null < $array_ultimo_Null[$i_aa_NULL+1]) {
-            $max_null=$array_ultimo_Null[$i_aa_NULL+1];
-        } 
-
-    }
-     
-    $array_ultimo_B=array($sez1_ul_vot_B, $sez2_ul_vot_B, $sez3_ul_vot_B, $sez4_ul_vot_B, $sez5_ul_vot_B,);
-
-    $max_b=$array_ultimo_B[0];
-
-    for($i_aa_B=0; $i_aa_B < count($array_ultimo_B) ; ++$i_aa_B) {
-    
-        if($max_b < $array_ultimo_B[$i_aa_B+1]) {
-            $max_b=$array_ultimo_B[$i_aa_B+1];
-        } 
 
     }
 
@@ -431,8 +234,12 @@ COSE DA RICORDARE
                                                 ?>
                                             </h3>
                                             <div class="">
-                                                <span class="ml-2">aggiornato alle ore
-                                                    <?php echo date_format(date_create($max_si), 'd/m/y H:i'); ?>
+                                                <span class="ml-2">aggiornato il
+                                                    <?php 
+                                                        $tab_ris=mysqli_query($conn,"SELECT DATE_FORMAT(ref1.`data_ora_inserimento` , '%d/%m/%y alle ore %H:%i') AS data_format FROM votazioni_referendum_1 ref1 WHERE ID_voto=4 UNION ALL SELECT DATE_FORMAT(ref2.`data_ora_inserimento` , '%d/%m/%y alle ore %H:%i') AS data_format FROM votazioni_referendum_2 ref2 WHERE ID_voto=4 UNION ALL SELECT DATE_FORMAT(ref3.`data_ora_inserimento` , '%d/%m/%y alle ore %H:%i') AS data_format FROM votazioni_referendum_3 ref3 WHERE ID_voto=4 UNION ALL SELECT DATE_FORMAT(ref4.`data_ora_inserimento` , '%d/%m/%y alle ore %H:%i') AS data_format FROM votazioni_referendum_4 ref4 WHERE ID_voto=4 UNION ALL SELECT DATE_FORMAT(ref5.`data_ora_inserimento` , '%d/%m/%y alle ore %H:%i') AS data_format FROM votazioni_referendum_5 ref5 WHERE ID_voto=4 ORDER BY data_format DESC LIMIT 1 ");
+                                                        $array=mysqli_fetch_array($tab_ris);
+                                                        echo $array['data_format'];
+                                                    ?>
                                                 </span>
                                             </div>
                                         </div>
@@ -456,8 +263,12 @@ COSE DA RICORDARE
                                                 ?>
                                             </h3>
                                             <div class="">
-                                                <span class="ml-2">aggiornato alle ore
-                                                    <?php echo date_format(date_create($max_no), 'd/m/y H:i'); ?>
+                                                <span class="ml-2">aggiornato il
+                                                    <?php
+                                                        $tab_ris=mysqli_query($conn,"SELECT DATE_FORMAT(ref1.`data_ora_inserimento` , '%d/%m/%y alle ore %H:%i') AS data_format FROM votazioni_referendum_1 ref1 WHERE ID_voto=1 UNION ALL SELECT DATE_FORMAT(ref2.`data_ora_inserimento` , '%d/%m/%y alle ore %H:%i') AS data_format FROM votazioni_referendum_2 ref2 WHERE ID_voto=1 UNION ALL SELECT DATE_FORMAT(ref3.`data_ora_inserimento` , '%d/%m/%y alle ore %H:%i') AS data_format FROM votazioni_referendum_3 ref3 WHERE ID_voto=1 UNION ALL SELECT DATE_FORMAT(ref4.`data_ora_inserimento` , '%d/%m/%y alle ore %H:%i') AS data_format FROM votazioni_referendum_4 ref4 WHERE ID_voto=1 UNION ALL SELECT DATE_FORMAT(ref5.`data_ora_inserimento` , '%d/%m/%y alle ore %H:%i') AS data_format FROM votazioni_referendum_5 ref5 WHERE ID_voto=1 ORDER BY data_format DESC LIMIT 1 ");
+                                                        $array=mysqli_fetch_array($tab_ris);
+                                                        echo $array['data_format'];
+                                                    ?>
                                                 </span>
                                             </div>
                                         </div>
@@ -472,7 +283,7 @@ COSE DA RICORDARE
                             <div class="card bg-primary mini-stat position-relative">
                                 <div class="card-body">
                                     <div class="mini-stat-desc">
-                                        <h6 class="text-uppercase verti-label text-white-50">Bianche</h6>
+                                        <h6 class="text-uppercase verti-label text-white-50">Bianche </h6>
                                         <div class="text-white">
                                             <h6 class="text-uppercase mt-0 text-white-50">Schede bianche</h6>
                                             <h3 class="mb-3 mt-0">
@@ -481,8 +292,12 @@ COSE DA RICORDARE
                                                 ?>
                                             </h3>
                                             <div class="">
-                                                <span class="ml-2">aggiornato alle ore 
-                                                    <?php echo date_format(date_create($max_b), 'd/m/y H:i'); ?>
+                                                <span class="ml-2">aggiornato il
+                                                    <?php 
+                                                        $tab_ris=mysqli_query($conn,"SELECT DATE_FORMAT(ref1.`data_ora_inserimento` , '%d/%m/%y alle ore %H:%i') AS data_format FROM votazioni_referendum_1 ref1 WHERE ID_voto=2 UNION ALL SELECT DATE_FORMAT(ref2.`data_ora_inserimento` , '%d/%m/%y alle ore %H:%i') AS data_format FROM votazioni_referendum_2 ref2 WHERE ID_voto=2 UNION ALL SELECT DATE_FORMAT(ref3.`data_ora_inserimento` , '%d/%m/%y alle ore %H:%i') AS data_format FROM votazioni_referendum_3 ref3 WHERE ID_voto=2 UNION ALL SELECT DATE_FORMAT(ref4.`data_ora_inserimento` , '%d/%m/%y alle ore %H:%i') AS data_format FROM votazioni_referendum_4 ref4 WHERE ID_voto=2 UNION ALL SELECT DATE_FORMAT(ref5.`data_ora_inserimento` , '%d/%m/%y alle ore %H:%i') AS data_format  FROM votazioni_referendum_5 ref5 WHERE ID_voto=2 ORDER BY data_format DESC LIMIT 1 ");
+                                                        $array=mysqli_fetch_array($tab_ris);
+                                                        echo $array['data_format'];
+                                                    ?>
                                                 </span>
                                             </div>
                                         </div>
@@ -506,8 +321,12 @@ COSE DA RICORDARE
                                             ?>
                                             </h3>
                                             <div class="">
-                                                <span class="ml-2">aggiornato alle ore 
-                                                    <?php echo date_format(date_create($max_null), 'd/m/y H:i');?>
+                                                <span class="ml-2">aggiornato il
+                                                    <?php
+                                                        $tab_ris=mysqli_query($conn,"SELECT DATE_FORMAT(ref1.`data_ora_inserimento` , '%d/%m/%y alle ore %H:%i') AS data_format FROM votazioni_referendum_1 ref1 WHERE ID_voto=3 UNION ALL SELECT DATE_FORMAT(ref2.`data_ora_inserimento` , '%d/%m/%y alle ore %H:%i') AS data_format FROM votazioni_referendum_2 ref2 WHERE ID_voto=3 UNION ALL SELECT DATE_FORMAT(ref3.`data_ora_inserimento` , '%d/%m/%y alle ore %H:%i') AS data_format FROM votazioni_referendum_3 ref3 WHERE ID_voto=3 UNION ALL SELECT DATE_FORMAT(ref4.`data_ora_inserimento` , '%d/%m/%y alle ore %H:%i') AS data_format FROM votazioni_referendum_4 ref4 WHERE ID_voto=3 UNION ALL SELECT DATE_FORMAT(ref5.`data_ora_inserimento` , '%d/%m/%y alle ore %H:%i') AS data_format  FROM votazioni_referendum_5 ref5 WHERE ID_voto=3 ORDER BY data_format DESC LIMIT 1 ");
+                                                        $array=mysqli_fetch_array($tab_ris);
+                                                        echo $array['data_format'];
+                                                    ?>
                                                 </span>
                                             </div>
                                         </div>
@@ -612,10 +431,8 @@ COSE DA RICORDARE
                                                     <td>
                                                         <?php
                                                             $tab_ris=mysqli_query($conn,"SELECT COUNT(ref1.ID_votazione_referendum) AS somma_voti_ref1 FROM votazioni_referendum_1 ref1 WHERE ID_voto=4");
-                                                            for ($i=0; $i<1; ++$i) {
                                                             $array=mysqli_fetch_array($tab_ris);
-                                                                echo $array['somma_voti_ref1'];
-                                                            }
+                                                            echo $array['somma_voti_ref1'];
                                                         ?> 
                                                     </td>
                                                 </tr>
@@ -624,10 +441,8 @@ COSE DA RICORDARE
                                                     <td>
                                                         <?php
                                                             $tab_ris=mysqli_query($conn,"SELECT COUNT(ref.ID_votazione_referendum) AS somma_voti_ref FROM votazioni_referendum_1 ref WHERE ID_voto=1");
-                                                            for ($i=0; $i<1; ++$i) {
-                                                                $array=mysqli_fetch_array($tab_ris);
-                                                                echo $array['somma_voti_ref'];
-                                                            }
+                                                            $array=mysqli_fetch_array($tab_ris);
+                                                            echo $array['somma_voti_ref'];
                                                         ?> 
                                                      </td>
                                                 </tr>
@@ -636,10 +451,8 @@ COSE DA RICORDARE
                                                     <td>
                                                         <?php
                                                             $tab_ris=mysqli_query($conn,"SELECT COUNT(ref.ID_votazione_referendum) AS somma_voti_ref FROM votazioni_referendum_1 ref WHERE ID_voto=2");
-                                                            for ($i=0; $i<1; ++$i) {
-                                                                $array=mysqli_fetch_array($tab_ris);
-                                                                echo $array['somma_voti_ref'];
-                                                            }
+                                                            $array=mysqli_fetch_array($tab_ris);
+                                                            echo $array['somma_voti_ref'];
                                                         ?> 
                                                      </td>
                                                 </tr>
@@ -648,10 +461,8 @@ COSE DA RICORDARE
                                                     <td>
                                                         <?php
                                                             $tab_ris=mysqli_query($conn,"SELECT COUNT(ref.ID_votazione_referendum) AS somma_voti_ref FROM votazioni_referendum_1 ref WHERE ID_voto=3");
-                                                            for ($i=0; $i<1; ++$i) {
-                                                                $array=mysqli_fetch_array($tab_ris);
-                                                                echo $array['somma_voti_ref'];
-                                                            }
+                                                            $array=mysqli_fetch_array($tab_ris);
+                                                            echo $array['somma_voti_ref'];
                                                         ?>
                                                     </td>
                                                 </tr>
@@ -687,11 +498,9 @@ COSE DA RICORDARE
                                                     <td>
                                                     <?php
                                                         $tab_ris=mysqli_query($conn,"SELECT COUNT(ref.ID_votazione_referendum) AS somma_voti_ref FROM votazioni_referendum_2 ref WHERE ID_voto=4");
-                                                        for ($i=0; $i<1; ++$i) {
-                                                            $array=mysqli_fetch_array($tab_ris);
-                                                            echo $array['somma_voti_ref'];
-                                                        }
-                                                        ?>
+                                                        $array=mysqli_fetch_array($tab_ris);
+                                                        echo $array['somma_voti_ref'];
+                                                    ?>
                                                     </td>
                                                 </tr>
                                                 <tr>
@@ -699,10 +508,8 @@ COSE DA RICORDARE
                                                     <td>
                                                     <?php
                                                         $tab_ris=mysqli_query($conn,"SELECT COUNT(ref.ID_votazione_referendum) AS somma_voti_ref FROM votazioni_referendum_2 ref WHERE ID_voto=1");
-                                                        for ($i=0; $i<1; ++$i) {
-                                                            $array=mysqli_fetch_array($tab_ris);
-                                                            echo $array['somma_voti_ref'];
-                                                        }
+                                                        $array=mysqli_fetch_array($tab_ris);
+                                                        echo $array['somma_voti_ref'];
                                                         ?>
                                                     </td>
                                                 </tr>
@@ -711,10 +518,8 @@ COSE DA RICORDARE
                                                     <td>
                                                     <?php
                                                         $tab_ris=mysqli_query($conn,"SELECT COUNT(ref.ID_votazione_referendum) AS somma_voti_ref FROM votazioni_referendum_2 ref WHERE ID_voto=2");
-                                                        for ($i=0; $i<1; ++$i) {
-                                                            $array=mysqli_fetch_array($tab_ris);
-                                                            echo $array['somma_voti_ref'];
-                                                        }
+                                                        $array=mysqli_fetch_array($tab_ris);
+                                                        echo $array['somma_voti_ref'];
                                                         ?>
                                                     </td>
                                                 </tr>
@@ -723,10 +528,8 @@ COSE DA RICORDARE
                                                     <td>
                                                     <?php
                                                         $tab_ris=mysqli_query($conn,"SELECT COUNT(ref.ID_votazione_referendum) AS somma_voti_ref FROM votazioni_referendum_2 ref WHERE ID_voto=3");
-                                                        for ($i=0; $i<1; ++$i) {
-                                                            $array=mysqli_fetch_array($tab_ris);
-                                                            echo $array['somma_voti_ref'];
-                                                        }
+                                                        $array=mysqli_fetch_array($tab_ris);
+                                                        echo $array['somma_voti_ref'];
                                                         ?>
                                                     </td>
                                                 </tr>
@@ -762,10 +565,8 @@ COSE DA RICORDARE
                                                     <td>
                                                     <?php
                                                         $tab_ris=mysqli_query($conn,"SELECT COUNT(ref.ID_votazione_referendum) AS somma_voti_ref FROM votazioni_referendum_3 ref WHERE ID_voto=4");
-                                                        for ($i=0; $i<1; ++$i) {
-                                                            $array=mysqli_fetch_array($tab_ris);
-                                                            echo $array['somma_voti_ref'];
-                                                        }
+                                                        $array=mysqli_fetch_array($tab_ris);
+                                                        echo $array['somma_voti_ref'];
                                                         ?>
                                                     </td>
                                                 </tr>
@@ -774,10 +575,8 @@ COSE DA RICORDARE
                                                     <td>
                                                     <?php
                                                         $tab_ris=mysqli_query($conn,"SELECT COUNT(ref.ID_votazione_referendum) AS somma_voti_ref FROM votazioni_referendum_3 ref WHERE ID_voto=1");
-                                                        for ($i=0; $i<1; ++$i) {
-                                                            $array=mysqli_fetch_array($tab_ris);
-                                                            echo $array['somma_voti_ref'];
-                                                        }
+                                                        $array=mysqli_fetch_array($tab_ris);
+                                                        echo $array['somma_voti_ref'];
                                                         ?>
                                                     </td>
                                                 </tr>
@@ -786,10 +585,8 @@ COSE DA RICORDARE
                                                     <td>
                                                     <?php
                                                         $tab_ris=mysqli_query($conn,"SELECT COUNT(ref.ID_votazione_referendum) AS somma_voti_ref FROM votazioni_referendum_3 ref WHERE ID_voto=2");
-                                                        for ($i=0; $i<1; ++$i) {
-                                                            $array=mysqli_fetch_array($tab_ris);
-                                                            echo $array['somma_voti_ref'];
-                                                        }
+                                                        $array=mysqli_fetch_array($tab_ris);
+                                                        echo $array['somma_voti_ref'];
                                                         ?>
                                                     </td>
                                                 </tr>
@@ -798,10 +595,8 @@ COSE DA RICORDARE
                                                     <td>
                                                     <?php
                                                         $tab_ris=mysqli_query($conn,"SELECT COUNT(ref.ID_votazione_referendum) AS somma_voti_ref FROM votazioni_referendum_3 ref WHERE ID_voto=3");
-                                                        for ($i=0; $i<1; ++$i) {
-                                                            $array=mysqli_fetch_array($tab_ris);
-                                                            echo $array['somma_voti_ref'];
-                                                        }
+                                                        $array=mysqli_fetch_array($tab_ris);
+                                                        echo $array['somma_voti_ref'];
                                                         ?>
                                                     </td>
                                                 </tr>
@@ -833,10 +628,8 @@ COSE DA RICORDARE
                                                     <td>
                                                     <?php
                                                         $tab_ris=mysqli_query($conn,"SELECT COUNT(ref.ID_votazione_referendum) AS somma_voti_ref FROM votazioni_referendum_4 ref WHERE ID_voto=4");
-                                                        for ($i=0; $i<1; ++$i) {
-                                                            $array=mysqli_fetch_array($tab_ris);
-                                                            echo $array['somma_voti_ref'];
-                                                        }
+                                                        $array=mysqli_fetch_array($tab_ris);
+                                                        echo $array['somma_voti_ref'];
                                                         ?>
                                                     </td>
                                                 </tr>
@@ -845,10 +638,8 @@ COSE DA RICORDARE
                                                     <td>
                                                     <?php
                                                         $tab_ris=mysqli_query($conn,"SELECT COUNT(ref.ID_votazione_referendum) AS somma_voti_ref FROM votazioni_referendum_4 ref WHERE ID_voto=1");
-                                                        for ($i=0; $i<1; ++$i) {
-                                                            $array=mysqli_fetch_array($tab_ris);
-                                                            echo $array['somma_voti_ref'];
-                                                        }
+                                                        $array=mysqli_fetch_array($tab_ris);
+                                                        echo $array['somma_voti_ref'];
                                                         ?>
                                                     </td>
                                                 </tr>
@@ -857,10 +648,8 @@ COSE DA RICORDARE
                                                     <td>
                                                     <?php
                                                         $tab_ris=mysqli_query($conn,"SELECT COUNT(ref.ID_votazione_referendum) AS somma_voti_ref FROM votazioni_referendum_4 ref WHERE ID_voto=2");
-                                                        for ($i=0; $i<1; ++$i) {
-                                                            $array=mysqli_fetch_array($tab_ris);
-                                                            echo $array['somma_voti_ref'];
-                                                        }
+                                                        $array=mysqli_fetch_array($tab_ris);
+                                                        echo $array['somma_voti_ref'];
                                                         ?>
                                                     </td>
                                                 </tr>
@@ -869,10 +658,8 @@ COSE DA RICORDARE
                                                     <td>
                                                     <?php
                                                         $tab_ris=mysqli_query($conn,"SELECT COUNT(ref.ID_votazione_referendum) AS somma_voti_ref FROM votazioni_referendum_4 ref WHERE ID_voto=3");
-                                                        for ($i=0; $i<1; ++$i) {
-                                                            $array=mysqli_fetch_array($tab_ris);
-                                                            echo $array['somma_voti_ref'];
-                                                        }
+                                                        $array=mysqli_fetch_array($tab_ris);
+                                                        echo $array['somma_voti_ref'];
                                                         ?>
                                                     </td>
                                                 </tr>
@@ -908,10 +695,8 @@ COSE DA RICORDARE
                                                         <td>
                                                         <?php
                                                         $tab_ris=mysqli_query($conn,"SELECT COUNT(ref.ID_votazione_referendum) AS somma_voti_ref FROM votazioni_referendum_5 ref WHERE ID_voto=4");
-                                                        for ($i=0; $i<1; ++$i) {
-                                                            $array=mysqli_fetch_array($tab_ris);
-                                                            echo $array['somma_voti_ref'];
-                                                        }
+                                                        $array=mysqli_fetch_array($tab_ris);
+                                                        echo $array['somma_voti_ref'];
                                                         ?>
                                                         </td>
                                                     </tr>
@@ -920,10 +705,8 @@ COSE DA RICORDARE
                                                         <td>
                                                         <?php
                                                         $tab_ris=mysqli_query($conn,"SELECT COUNT(ref.ID_votazione_referendum) AS somma_voti_ref FROM votazioni_referendum_5 ref WHERE ID_voto=1");
-                                                        for ($i=0; $i<1; ++$i) {
-                                                            $array=mysqli_fetch_array($tab_ris);
-                                                            echo $array['somma_voti_ref'];
-                                                        }
+                                                        $array=mysqli_fetch_array($tab_ris);
+                                                        echo $array['somma_voti_ref'];
                                                         ?>
                                                         </td>
                                                     </tr>
@@ -932,10 +715,8 @@ COSE DA RICORDARE
                                                         <td>
                                                         <?php
                                                         $tab_ris=mysqli_query($conn,"SELECT COUNT(ref.ID_votazione_referendum) AS somma_voti_ref FROM votazioni_referendum_5 ref WHERE ID_voto=2");
-                                                        for ($i=0; $i<1; ++$i) {
-                                                            $array=mysqli_fetch_array($tab_ris);
-                                                            echo $array['somma_voti_ref'];
-                                                        }
+                                                        $array=mysqli_fetch_array($tab_ris);
+                                                        echo $array['somma_voti_ref'];
                                                         ?>
                                                         </td>
                                                     </tr>
@@ -944,10 +725,8 @@ COSE DA RICORDARE
                                                         <td>
                                                         <?php
                                                         $tab_ris=mysqli_query($conn,"SELECT COUNT(ref.ID_votazione_referendum) AS somma_voti_ref FROM votazioni_referendum_5 ref WHERE ID_voto=3");
-                                                        for ($i=0; $i<1; ++$i) {
-                                                            $array=mysqli_fetch_array($tab_ris);
-                                                            echo $array['somma_voti_ref'];
-                                                        }
+                                                        $array=mysqli_fetch_array($tab_ris);
+                                                        echo $array['somma_voti_ref'];
                                                         ?>
                                                         </td>
                                                     </tr>
