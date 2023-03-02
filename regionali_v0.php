@@ -254,6 +254,37 @@
     
                                 </div>
                             </div>
+                            <div class="card m-b-20">
+                                <div class="card-body">
+    
+                                    <h4 class="mt-0 header-title">Risultati Totali Elezioni Regionali</h4>
+                                    <p class="text-muted m-b-30">Risultati <strong>definitivi</strong> sul numero voti dei <strong>Candidati Presidenti</strong> delle Elezioni Regionali </p>
+    
+                                    <div class="table-rep-plugin">
+                                        <div class="table-responsive b-0" data-pattern="priority-columns">
+                                            <table id="tech-companies-1" class="table  table-striped">
+                                                <thead>
+                                                <tr>
+                                                    <th>Cand. Presidente</th>
+                                                    <th data-priority="1">Sez. 1</th>
+                                                    <th data-priority="2">Sez. 2</th>
+                                                    <th data-priority="3">Sez. 3</th>
+                                                    <th data-priority="4">Sez. 4</th>
+                                                    <th data-priority="5">Sez. 5</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                   
+                                                </tr>
+                                                
+                                                </tbody>
+                                            </table>
+                                        </div>
+    
+                                    </div>
+    
+                                </div>
+                            </div>
                         </div> <!-- end col -->
                     </div>
 
