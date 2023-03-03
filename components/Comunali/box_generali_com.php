@@ -1,0 +1,109 @@
+<?php
+echo'<!-- page-title-box -->
+<div class="page-content-wrapper" id="sezioneTotale">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xl-3 col-md-6">
+                <div class="card bg-primary mini-stat position-relative">
+                    <div class="card-body">
+                        <div class="mini-stat-desc">
+                            <h6 class="text-uppercase verti-label text-white-50">TOTALE VOTI</h6>
+                            <div class="text-white">
+                                <h6 class="text-uppercase mt-0 text-white-50">TOTALE VOTI</h6>
+                                <h3 class="mb-3 mt-0">
+                                    3911+22*
+                                </h3>
+                                <div class="">
+                                    <span class="ml-2">aggiornato alle ore</span>
+                                </div>
+                            </div>
+                            <div class="mini-stat-icon">
+                                <i class="mdi mdi-account-multiple-outline display-2"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-md-6">
+                <div class="card bg-primary mini-stat position-relative">
+                    <div class="card-body">
+                        <div class="mini-stat-desc">
+                            <h6 class="text-uppercase verti-label text-white-50">VOTI VALIDI</h6>
+                            <div class="text-white">
+                                <h6 class="text-uppercase mt-0 text-white-50">VOTI VALIDI</h6>
+                                <h3 class="mb-3 mt-0">
+                                    3852
+                                </h3>
+                                <div class="">
+                                    <span class="ml-2">aggiornato alle ore</span>
+                                </div>
+                            </div>
+                            <div class="mini-stat-icon">
+                                <i class="mdi mdi-package display-2"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-md-6">
+                <div class="card bg-primary mini-stat position-relative">
+                    <div class="card-body">
+                        <div class="mini-stat-desc">
+                            <h6 class="text-uppercase verti-label text-white-50">SCHEDE BIANCHE</h6>
+                            <div class="text-white">
+                                <h6 class="text-uppercase mt-0 text-white-50">BIANCHE</h6>
+                                <h3 class="mb-3 mt-0">
+                                    55
+                                </h3>
+                                <div class="">
+                                    <span class="ml-2">aggiornato alle ore </span>
+                                </div>
+                            </div>
+                            <div class="mini-stat-icon">
+                                <i class="mdi mdi-tag-text-outline display-2"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-md-6">
+                <div class="card bg-primary mini-stat position-relative">
+                    <div class="card-body">
+                        <div class="mini-stat-desc">
+                            <h6 class="text-uppercase verti-label text-white-50">SCHEDE NULLE</h6>
+                            <div class="text-white">
+                                <h6 class="text-uppercase mt-0 text-white-50">NULLE</h6>
+                                <h3 class="mb-3 mt-0">
+                                26
+                                </h3>
+                                <div class="">
+                                    <span class="ml-2">aggiornato alle ore </span>
+                                </div>
+                            </div>
+                            <div class="mini-stat-icon">
+                                <i class="mdi mdi-briefcase-check display-2"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end row -->
+        
+        <div class="col-lg-12">
+        <div class="">
+            <div class="alert alert-dark" role="alert">
+                <strong> *Cittadini Comunitari aventi diritto di voto per l&#39;elezione del solo Sindaco.   </strong>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-12">
+        <div class="">
+            <div class="alert alert-dark" role="alert">
+            <strong> Totale Elettori: 4814 <br>
+                Totale Votanti: 3911 <br>
+                Affluenza alle urne: 81.24% <br> </strong>
+            </div>
+        </div>
+    </div>';
