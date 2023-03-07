@@ -1,4 +1,3 @@
-
 <?php
 /* COSE DA RICORDARE - PARTE AMMINISTRATORE 
 
@@ -42,14 +41,14 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-md-12">
-                            <form action="admin/php/aggiungi_lista.php" method="POST">
+                            <form class="sendForm" action="#">
                                 <div class="form-group">
                                     <label for="nomepartitoregione">Nome partito regione</label>
                                     <input type="text" class="form-control" id="nomepartitoregione" name="nome_partito" placeholder="Inserisci nome partito regione" required>
                                 </div>
                                 <div class="form-group">
                                     <label for="">Presidente candidato regione</label>
-                                    <select class="form-control" name="id_presidente" required>
+                                    <select class="form-control" name="id_presidente" id="codice_presidente" required>
                                         <option value="0">Seleziona un presidente candidato...</option>
                                          <?php
                                             $array=json_decode($obj-> getTuttoPresidente(),true);
@@ -71,6 +70,46 @@
             </div>
         </div>
         <!-- page wrapper end -->
+
+        <!-- Modal Successfull-->
+        <div class="modal fade" id="successfullModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Tutto okay</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    La lista è stata aggiunta correttamente. Vedrai sul database la riga corrispondente.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Chiudi</button>
+                </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal Fail -->
+        <div class="modal fade" id="failModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Ahiiaa..è successo qualcosa</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    La lista non è stata aggiunta. Per favore, riprova!
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Chiudi</button>
+                </div>
+                </div>
+            </div>
+        </div>
 
         <!-- Footer -->
         <?php include '../components/footer.php'; ?>
@@ -95,6 +134,43 @@
 
         <!-- App js -->
         <script src="assets/js/app.js"></script>
+
+        <script>
+            /* COSE DA RICORDARE 
+                // il punto serve per osservare le class
+                // l'hashtag serve per osservare gli id 
+            */
+
+
+            // Dico quale elemento osservare...
+            $('.sendForm').submit(function (e) {
+                e.preventDefault();
+                //Si scatena l'evento e viene eseguito questo codice...
+
+                //Prendo i dati
+                var nome_partito = $('#nomepartitoregione').val();
+                var codice_presidente = $('#codice_presidente').val();
+                var ordinamento = $('#ordinamento').val();
+
+                //Invio i dati
+                $.ajax({
+                    type: "POST",
+                    url: "admin/php/aggiungi_lista.php",
+                    data: {
+                            "nome_partito": nome_partito,
+                            "id_presidente": codice_presidente,
+                            "ordinamento": ordinamento
+                        },
+                    success: function (response) {
+                        $('#successfullModal').modal('show');
+                        $('.sendForm').trigger("reset");
+                    },
+                    error: function() {
+                        $('#failModal').modal('show');
+                    }
+                });
+            });
+        </script>
 
     </body>
 
